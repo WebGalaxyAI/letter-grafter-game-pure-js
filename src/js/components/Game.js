@@ -84,11 +84,11 @@ class Game {
                 if (this.lettersContainer.textContent.trim() === this.selectedWord) {
                     this.wordGuessed();
                 }
-
-                this.resetGame.addEventListener('click', () => {
-                    this.startOver();
-                });
             }
+        });
+
+        this.resetGame.addEventListener('click', () => {
+            this.startOver();
         });
 
         window.addEventListener('guessedModalClosed', () => {
