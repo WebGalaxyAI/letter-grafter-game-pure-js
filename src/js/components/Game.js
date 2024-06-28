@@ -23,7 +23,6 @@ class Game {
 
     start() {
         setTimeout(() => {
-            this.audioGameStart.play();
             this.gameTimer.start();
             this.playNextWord();
             this.addListeners();
@@ -116,7 +115,7 @@ class Game {
             this.drawLetters(shuffleLetters, this.colors);
         } else {
             setTimeout(() => {
-                this.modal.showModal('Ви вгадали всі слова! Гра завершена', 'finishedModal');
+                this.modal.showModal('You guessed all the words! Game over', 'finishedModal');
             }, 500);
         }
     }
